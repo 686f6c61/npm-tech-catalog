@@ -1,0 +1,37 @@
+# SOURCE FILES
+src/
+tests/
+examples/
+
+# CONFIG FILES
+tsconfig.json
+tsup.config.ts
+vitest.config.ts
+.eslintrc.js
+.prettierrc
+.npmrc
+
+# DEVELOPMENT
+.git/
+.github/
+.vscode/
+.idea/
+*.test.ts
+*.spec.ts
+coverage/
+
+# DOCUMENTATION (KEEP ONLY README AND CHANGELOG)
+docs/
+demo/
+INSTRUCCIONES_GIT.md
+INSTRUCCIONES_RAPIDAS.txt
+EJEMPLO_VISUAL.txt
+
+# MISC
+.DS_Store
+.env
+.env.*
+*.log
+*.tgz
+node_modules/
+.claude/

@@ -1,0 +1,13 @@
+{
+  "name": "tech-catalog-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm install && node build.js",
+    "start": "npx http-server . -p ${PORT:-8080} --cors"
+  },
+  "dependencies": {
+    "@sparring/tech-catalog": "^1.0.0",
+    "http-server": "^14.1.1"
+  }
+}

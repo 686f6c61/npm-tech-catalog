@@ -1,0 +1,86 @@
+{
+  "name": "@sparring/tech-catalog",
+  "version": "1.0.0",
+  "description": "Comprehensive catalog of 1094+ technologies, frameworks, libraries, and tech stacks with TypeScript support",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./core": {
+      "types": "./dist/core/index.d.ts",
+      "require": "./dist/core/index.js",
+      "import": "./dist/core/index.mjs"
+    },
+    "./search": {
+      "types": "./dist/search/index.d.ts",
+      "require": "./dist/search/index.js",
+      "import": "./dist/search/index.mjs"
+    },
+    "./filters": {
+      "types": "./dist/filters/index.d.ts",
+      "require": "./dist/filters/index.js",
+      "import": "./dist/filters/index.mjs"
+    },
+    "./validators": {
+      "types": "./dist/validators/index.d.ts",
+      "require": "./dist/validators/index.js",
+      "import": "./dist/validators/index.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "technology",
+    "catalog",
+    "tech-stack",
+    "frameworks",
+    "libraries",
+    "programming-languages",
+    "developer-tools",
+    "autocomplete",
+    "validation",
+    "typescript"
+  ],
+  "author": "SPARRING",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/686f6c61/npm-tech-catalog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/686f6c61/npm-tech-catalog/issues"
+  },
+  "homepage": "https://www.686f6c61.dev",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -5,6 +5,12 @@ ALL NOTABLE CHANGES TO THIS PROJECT WILL BE DOCUMENTED IN THIS FILE.
 THE FORMAT IS BASED ON [KEEP A CHANGELOG](https://keepachangelog.com/en/1.0.0/),
 AND THIS PROJECT ADHERES TO [SEMANTIC VERSIONING](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-04-06
+
+### Changed
+
+- Migrated demo URL to self-hosted infrastructure (npm-tech-catalog.686f6c61.dev)
+
 ## [1.0.0] - 2025-01-XX
 
 ### ADDED

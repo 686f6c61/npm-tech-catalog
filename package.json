@@ -1,6 +1,6 @@
 {
   "name": "@sparring/tech-catalog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Comprehensive catalog of 1094+ technologies, frameworks, libraries, and tech stacks with TypeScript support",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -68,7 +68,7 @@
   "bugs": {
     "url": "https://github.com/686f6c61/npm-tech-catalog/issues"
   },
-  "homepage": "https://www.686f6c61.dev",
+  "homepage": "https://npm-tech-catalog.686f6c61.dev",
   "devDependencies": {
     "@types/node": "^20.10.0",
     "@typescript-eslint/eslint-plugin": "^6.13.0",

@@ -1,9 +1,18 @@
 FROM node:22-alpine AS build
 WORKDIR /app
+
+# Build-time public identifier de GlitchTip. Lo recibimos desde Coolify
+# y lo usamos para sustituir el placeholder en demo/index.html.
+ARG GLITCHTIP_DSN=
+ENV GLITCHTIP_DSN=$GLITCHTIP_DSN
+
 COPY . .
 WORKDIR /app/demo
 RUN npm install
 RUN node build.js
+RUN if [ -n "$GLITCHTIP_DSN" ]; then \
+      sed -i "s|__GLITCHTIP_DSN__|$GLITCHTIP_DSN|g" index.html; \
+    fi
 
 FROM nginx:alpine
 COPY --from=build /app/demo/ /usr/share/nginx/html/

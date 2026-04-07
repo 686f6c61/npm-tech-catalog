@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo - @sparring/tech-catalog</title>
+    <!--
+      GlitchTip browser SDK. La DSN se inyecta en build sustituyendo el
+      placeholder __GLITCHTIP_DSN__ desde el Dockerfile (sed). Si queda
+      vacia, el SDK no se inicializa.
+    -->
+    <script src="https://browser.sentry-cdn.com/8.45.0/bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+      (function () {
+        var dsn = '__GLITCHTIP_DSN__';
+        if (window.Sentry && dsn && dsn.indexOf('__') === -1) {
+          window.Sentry.init({
+            dsn: dsn,
+            release: 'npm-tech-catalog',
+            environment: 'production',
+            tracesSampleRate: 0.01,
+          });
+        }
+      })();
+    </script>
     <style>
         * {
             margin: 0;
